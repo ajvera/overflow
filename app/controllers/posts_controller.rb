@@ -12,8 +12,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
-    @post.save
-    redirect_to show_posts_path
+    @post.save!
+    redirect_to show_posts_path(@post.id)
   end
 
   def show

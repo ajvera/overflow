@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root 'posts#index'
   # resource :posts, only: [:create, :new, :index]
 
+  post '/users' => 'users#create', as: :users
+  get 'users/new' => 'users#new', as: :new_user
 end
